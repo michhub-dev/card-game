@@ -42,3 +42,7 @@ div.card-image{
     width: 118px;
     margin: 5px;
 }
+.img{
+ height: 100%;
+ width: 100%;
+}
