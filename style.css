@@ -3,6 +3,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     height: 100vh;
     font-family: 'Rubik Storm', cursive;
@@ -23,10 +24,21 @@ button#new-game{
     color: #f36e09;
 }
 button#draw-btn{
+    align-self: stretch;
     padding: 1em;
     font-size: 1.6rem;
     font-weight: bolder;
     border: none;
     background-color: #FF7000;
     color: #ffffff;
+}
+div#draw-img{
+    display: flex;
+}
+div.card-image{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 165px;
+    width: 118px;
+    margin: 5px;
 }
