@@ -1,0 +1,32 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    font-family: 'Rubik Storm', cursive;
+    background-image: url(image/bg-game1.jpeg);
+
+}
+button#new-game{
+    width: 120px;
+    height: 50px;
+    align-self: flex-start;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 1px solid red;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    color: #f36e09;
+}
+button#draw-btn{
+    padding: 1em;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    border: none;
+    background-color: #FF7000;
+    color: #ffffff;
+}
