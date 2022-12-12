@@ -41,11 +41,3 @@ const determineWinner = (card1, card2) => {
     }
 }
 
-// const card1IndexValue = {
-//     value: '8'
-// }
-// const card2IndexValue = {
-//     value: 'ACE'
-// }
-
-// determineWinner(card1IndexValue, card2IndexValue)
