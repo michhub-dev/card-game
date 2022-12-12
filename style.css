@@ -32,6 +32,9 @@ button#draw-btn{
     background-color: #FF7000;
     color: #ffffff;
 }
+#draw-btn:disabled{
+    cursor:not-allowed;
+}
 div#draw-img{
     display: flex;
 }
@@ -57,4 +60,12 @@ p#remaining{
     color: #ffffff;
     font-size: 1.5em;
     font-weight: bold;
+}
+.upper-text{
+    display: flex;
+    align-self: flex-start;
+    
+}
+.upper-text > p{
+     margin-left: 0.5em;
 }

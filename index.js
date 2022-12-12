@@ -2,7 +2,7 @@ let card_Id
 const imageContainer = document.getElementById('draw-img')
 const winnerMessage = document.getElementById('winner-message')
 const remainingCard = document.getElementById('remaining')
-
+const drawBTN = document.getElementById('draw-btn')
 // fetch the API to start a new game when clicked
 document.getElementById('new-game').addEventListener('click', () => {
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -24,9 +24,13 @@ document.getElementById('new-game').addEventListener('click', () => {
         const winnerText = determineWinner(data.cards[0], data.cards[1])
         winnerMessage.textContent = winnerText
         remainingCard.textContent = `Remaining card: ${data.remaining}`
+
+        if(data.remaining === 0){
+            drawBTN.disabled = true
+        }
     })
  }
-document.getElementById('draw-btn').addEventListener('click', drawCard)
+drawBTN.addEventListener('click', drawCard)
 
 const determineWinner = (card1, card2) => {
     const options = ["2", "3", "4", "5", "6", "7", "8", "9", 
