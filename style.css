@@ -6,7 +6,7 @@ body{
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    font-family: 'Rubik Storm', cursive;
+    font-family: 'Roboto', sans-serif;
     background-image: url(image/bg-game1.jpeg);
 
 }
@@ -46,11 +46,15 @@ div.card-image{
  height: 100%;
  width: 100%;
 }
-p#winner-message{
+h2#winner-message{
     color: #ffffff;
-    font-size: 1.2em;
     font-weight: bolder;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    text-shadow: #000000;
+   
+    text-transform: capitalize;
+   
+}
+p#remaining{
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
 }

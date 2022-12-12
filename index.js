@@ -1,6 +1,7 @@
 let card_Id
-let imageContainer = document.getElementById('draw-img')
-let winnerMessage = document.getElementById('winner-message')
+const imageContainer = document.getElementById('draw-img')
+const winnerMessage = document.getElementById('winner-message')
+const remainingCard = document.getElementById('remaining')
 
 // fetch the API to start a new game when clicked
 document.getElementById('new-game').addEventListener('click', () => {
@@ -8,7 +9,7 @@ document.getElementById('new-game').addEventListener('click', () => {
        .then(res => res.json())
        .then(data => {
         card_Id = data.deck_id
-        console.log(card_Id)
+        remainingCard.textContent = `Remaining card: ${data.remaining}`
        })
        
 
@@ -22,6 +23,7 @@ document.getElementById('new-game').addEventListener('click', () => {
         imageContainer.children[1].innerHTML =  `<img src=${data.cards[1].image} class='img'/>`
         const winnerText = determineWinner(data.cards[0], data.cards[1])
         winnerMessage.textContent = winnerText
+        remainingCard.textContent = `Remaining card: ${data.remaining}`
     })
  }
 document.getElementById('draw-btn').addEventListener('click', drawCard)
