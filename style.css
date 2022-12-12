@@ -25,7 +25,7 @@ button#new-game{
 }
 button#draw-btn{
     align-self: stretch;
-    padding: 1em;
+    padding: 0.8em;
     font-size: 1.6rem;
     font-weight: bolder;
     border: none;
@@ -52,7 +52,6 @@ div.card-image{
 h2#winner-message{
     color: #ffffff;
     font-weight: bolder;
-   
     text-transform: capitalize;
    
 }
@@ -68,4 +67,12 @@ p#remaining{
 }
 .upper-text > p{
      margin-left: 0.5em;
+}
+small#my-score{
+    color: #ffffff;
+    font-weight: bold;
+}
+small#computer-score{
+    color: #ffffff;
+    font-weight: bold;
 }

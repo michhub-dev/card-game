@@ -1,8 +1,13 @@
 let card_Id
+let computer_score = 0
+let my_score = 0
 const imageContainer = document.getElementById('draw-img')
 const winnerMessage = document.getElementById('winner-message')
 const remainingCard = document.getElementById('remaining')
 const drawBTN = document.getElementById('draw-btn')
+const computerScore = document.getElementById('computer-score')
+const myScore = document.getElementById('my-score')
+
 // fetch the API to start a new game when clicked
 document.getElementById('new-game').addEventListener('click', () => {
     fetch('https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/')
@@ -39,9 +44,13 @@ const determineWinner = (card1, card2) => {
     const card2Value = options.indexOf(card2.value) 
 
     if(card1Value > card2Value){
-        return 'card 1 wins'
+        computer_score++
+        computerScore.textContent = `Computer score: ${computer_score}`
+        return 'Computer wins'
     }else if(card1Value < card2Value){
-        return 'card 2 wins'
+        my_score++
+        myScore.textContent = `My score: ${my_score}`
+        return 'I won!'
     }else{
         return 'draw'
     }
