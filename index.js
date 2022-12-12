@@ -32,6 +32,13 @@ document.getElementById('new-game').addEventListener('click', () => {
 
         if(data.remaining === 0){
             drawBTN.disabled = true
+            if( computer_score > my_score){
+                winnerMessage.textContent = 'Computer won the game'
+            }else if(computer_score < my_score){
+                winnerMessage.textContent = 'you won the game!'
+            }else{
+                winnerMessage.textContent = "It's a draw"
+            }
         }
     })
  }
@@ -46,11 +53,11 @@ const determineWinner = (card1, card2) => {
     if(card1Value > card2Value){
         computer_score++
         computerScore.textContent = `Computer score: ${computer_score}`
-        return 'Computer wins'
+        return 'Computer leading'
     }else if(card1Value < card2Value){
         my_score++
         myScore.textContent = `My score: ${my_score}`
-        return 'I won!'
+        return 'You are leading!'
     }else{
         return 'draw'
     }
